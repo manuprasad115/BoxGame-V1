@@ -1,0 +1,58 @@
+.box{
+    width:60px;
+    height:60px;
+    float:left;
+}
+.box.first{
+    clear:both;
+}
+.container{
+    display:block;
+    position:absolute;
+    width:60px;
+    height:60px;
+}
+.edge-top{
+    position:absolute;
+    border: 1px solid #ff0000;
+    width:50px;
+    height:5px;
+    top:0px;
+    left:5px;
+}
+.edge-bottom{
+    position:absolute;
+    border: 1px solid #ff0000;
+    width:50px;
+    height:5px;
+    top:55px;
+    left:5px;
+}
+.edge-left{
+    position:absolute;
+    border: 1px solid #ff0000;
+    width:5px;
+    height:50px;
+    top:5px;
+    left:0px;
+}
+.edge-right{
+    position:absolute;
+    border: 1px solid #ff0000;
+    width:5px;
+    height:50px;
+    top:5px;
+    left:55px;
+}
+.edge.fill{
+    background-color:#00ff00;
+
+}
+.innerBox{
+    position: absolute;
+    top:20px;
+    left:20px;
+    width:20px;
+    height:20px;
+    font-size: 14px;
+}

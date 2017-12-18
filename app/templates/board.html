@@ -1,0 +1,26 @@
+<div *ngIf="!playStart">
+    <div>
+        <input type="text" id="name" [(ngModel)]="newPlayer.name" placeholder="Name" />
+        <input type="text" id="icon" [(ngModel)]="newPlayer.icon" placeholder="Icon" />
+        <input type="button" (click)="startGame()" value="Start Game" />
+    </div>
+</div>
+
+<div *ngIf="playStart">
+    <div>
+         <div><b>{{newPlayer.name}}</b><br />Points : {{newPlayer.points}}</div>
+         <div><b>{{myPlayer.name}}</b><br />Points : {{myPlayer.points}}</div>
+    </div>
+ <h4>Next Player : {{currentPlayer.name}}</h4>   
+<div class="box" [class.first]="isFirstBox(box.id)" *ngFor="let box of boxList" >
+    <div class="container">
+        <div class="edge edge-top" [class.fill]="box.top.status" (click)="setEdge(box.top)"></div>
+        <div class="edge edge-bottom" [class.fill]="box.bottom.status" (click)="setEdge(box.bottom)" ></div>
+        <div class="edge edge-left" [class.fill]="box.left.status" (click)="setEdge(box.left)"></div>
+        <div class="edge edge-right" [class.fill]="box.right.status" (click)="setEdge(box.right)"></div>
+        <div class="innerBox" *ngIf="box.status">
+            {{box.player.icon}}
+        </div>
+    </div>
+</div>
+</div>
